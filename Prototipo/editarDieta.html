@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<link href="style.css" rel="stylesheet" type="text/css" media="all">	
 		<meta charset = "UTF-12">
 		<title> Editar Dieta </title>
+		
+		<style>
+			#container{
+				width: 1200px;  
+			}
+		</style>
 	</head>
-	
 	<body>
+	
+	<div id="container">
+	<center>
 		<h1> Editar Dieta </h1>
-		<form>
+		<form class="pure-form">
 			Nome:<br>
-			<input type="text" name="nome" value = Crescimento><br>
-			<table style="width:30%" border = "1px">
+			<input type="text" name="nome" value = Crescimento><br><br>
+			<table class="pure-table" style="width:30%" border = "1px">
 			  <tr>
 				<th>Ração</th>
 				<th>Quantidade</th>
@@ -37,9 +47,14 @@
 				<td><input type="text" name="nome"></td> 
 			  </tr>
 			</table>
-			<input type="submit" value="Atualizar">
-			<input type="reset" value="Limpar">
-			<a href = "#"> Voltar </a>		
+		<div id="botao">
+			<input class="pure-button" type="submit" value="Atualizar">
+			<input class="pure-button" type="reset" value="Limpar">
+			<a class="pure-button" href = "dieta.html"> Voltar </a>		
+		</div>
 		</form>
+	</center>
+	</div>
+
 	</body>
 </html>
