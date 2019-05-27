@@ -24,9 +24,9 @@
 		function alterar($Usuario, $link){
 			$query = "UPDATE `usuario` SET `Nome`= '".$Usuario->getNome()."',
 			`Sobrenome`= '".$Usuario->getSobrenome()."',
-			`dataNasc`= '".$Usuario->getNasc()."',
-			`Senha`='".$Usuario->getSenha()."
-			WHERE Apelido = '".$Usuario->getApelido()."'";
+			`dataNasc`= '".$Usuario->getDataNasc()."',
+			`Senha`='".$Usuario->getSenha()."'
+			WHERE Apelido = '".$Usuario->getApelido()."';";
 			echo $query;
 			if (!mysqli_query($link,$query)) {
 				die ("Não foi possível alterarr".mysqli_error($link));

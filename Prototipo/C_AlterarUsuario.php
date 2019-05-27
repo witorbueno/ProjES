@@ -7,7 +7,7 @@
 
 	$Usuario = new Usuario($nome, $sobrenome, $apelido, $nasc, $senha);
 	
-	$connect = new Connection("localhost", "root", "", "usuario");
+	$connect = new Connection("localhost", "root", "", "Usuario");
 	$connect->conectar();
 	
 	$usuarioDAO = new UsuarioDAO();
