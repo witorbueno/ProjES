@@ -1,4 +1,4 @@
-<?php include_once("Usuario.php"); include_once("Connection.php"); include_once("UsuarioDAO.php");
+<?php include_once("../Model/Usuario.php"); include_once("../Persistence/Connection.php"); include_once("../Persistence/usuarioDAO.php");
 	$nome = $_POST['nome'];
 	$sobrenome = $_POST['sobrenome'];
 	$apelido = $_POST['user'];
