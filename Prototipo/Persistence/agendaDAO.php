@@ -33,7 +33,8 @@
 			echo "<br>"; echo "Alterado com Sucesso";
 		}
 		function excluir($Compromisso, $link){
-				$query = "DELETE FROM `agenda` WHERE Nome = '".$Compromisso->getNome()."'";
+				$query = "DELETE FROM `agenda` WHERE Pet = '".$Compromisso->getPet()."'
+			AND Local ='".$Compromisso->getLocal()."';";
 			echo $query; echo "<br>";
 	
 			if (!mysqli_query($link,$query)) {
@@ -42,8 +43,9 @@
 			echo "Salvo com Sucesso";
 			
 		}
-			function consultar($Usuario, $link){
-			$query = "SELECT * FROM `agenda` WHERE Apelido = '".$Compromisso->getNome()."'";
+			function consultar($Compromisso, $link){
+			$query = "SELECT * FROM `agenda` WHERE Pet = '".$Compromisso->getPet()."'
+			AND Local ='".$Compromisso->getLocal()."';";
 			$result = mysqli_query($link,$query);
 			if (!$result) {
 				echo ("Não foi possível encontrar no banco de dados./n Erro no MySQL: ".mysqli_error($link));

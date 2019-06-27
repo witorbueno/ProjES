@@ -44,7 +44,7 @@
 			
 		}
 			function consultar($Usuario, $link){
-			$query = "SELECT * FROM `usuario` WHERE Apelido = '".$Usuario->getApelido()."'";
+			$query = "SELECT * FROM `agenda` WHERE Apelido = '".$Usuario->getApelido()."'";
 			$result = mysqli_query($link,$query);
 			if (!$result) {
 				echo ("Não foi possível encontrar no banco de dados./n Erro no MySQL: ".mysqli_error($link));
