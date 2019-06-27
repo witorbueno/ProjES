@@ -4,3 +4,5 @@ O Produto tem como principal funcionalidade gerar códigos QR em formato adequad
 Sobre as regras de uso do git:
 O commit deverá conter acentuação, e começar com letra maiúscula, podendo ter ou não descrição detalhada com, no máximo, 50 caracteres.
 Todo o conteúdo principal do projeto, será enviado no branch master. Um novo breach só será criado se absolutamente necessário.
+
+O código estará comentado com uma breve descrição da funcionalidade dos métodos, paramêtros esperados serão identificados com "@param" similar ao padrão JDoc (Utilizado em Java).
