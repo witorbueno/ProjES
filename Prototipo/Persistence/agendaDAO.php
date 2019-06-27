@@ -1,9 +1,13 @@
 <?php
+	//Classe responsavel pelo CRUD da Agenda
+	//Realiza as quatro operações no BD 
 	class AgendaDAO {
 		
 		function __construct(){			
 		}
-		
+		//Insere um novo compromisso no BD
+		//@param 	$Compromisso : objeto do tipo compromisso
+		//		 	$link : link do BD
 		function cadastrar($Compromisso, $link){
 			$query = "INSERT INTO `agenda`(`Nome`, `Data`, `Pet`, `Local`) VALUES('"
 			.$Compromisso->getNome()."','"
@@ -18,7 +22,9 @@
 			}
 			echo "Salvo com Sucesso";
 		}
-		
+		//Altera um compromisso existente no BD
+		//@param 	$Compromisso : objeto do tipo compromisso
+		//		 	$link : link do BD
 		function alterar($Compromisso, $link){
 			$query = "UPDATE `Agenda` SET `Nome`= '".$Compromisso->getNome()."',
 			`Data`= '".$Compromisso->getData()."',
@@ -32,6 +38,10 @@
 			}
 			echo "<br>"; echo "Alterado com Sucesso";
 		}
+		
+		//Remove um compromisso existente no BD
+		//@param 	$Compromisso : objeto do tipo compromisso
+		//		 	$link : link do BD
 		function excluir($Compromisso, $link){
 				$query = "DELETE FROM `agenda` WHERE Pet = '".$Compromisso->getPet()."'
 			AND Local ='".$Compromisso->getLocal()."';";
@@ -43,6 +53,10 @@
 			echo "Salvo com Sucesso";
 			
 		}
+		
+		//Busca um compromisso existente no BD
+		//@param 	$Compromisso : objeto do tipo compromisso
+		//		 	$link : link do BD
 			function consultar($Compromisso, $link){
 			$query = "SELECT * FROM `agenda` WHERE Pet = '".$Compromisso->getPet()."'
 			AND Local ='".$Compromisso->getLocal()."';";
