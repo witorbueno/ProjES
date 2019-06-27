@@ -57,9 +57,17 @@
 <br><br>
 <div id="botao">
 	<form action="../Persistence/cadastroEvento.php">
-		<input class="pure-button" type="submit" value="Cadastrar evento">
+		<input class="pure-button" type="submit" value="Cadastrar">
 	</form>
 <br>
+<form action="../view/excluiEvento.php">
+		<input class="pure-button" type="submit" value="Excluir ">
+	</form>
+	<br>
+	<form action="../view/buscaEvento.php">
+		<input class="pure-button" type="submit" value="Buscar ">
+	</form>
+	<br>
 
 		<a class="pure-button" href="inter.html"> Editar </a><br><br>
 
