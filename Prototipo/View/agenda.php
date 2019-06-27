@@ -25,6 +25,26 @@
 	<th>Local</th>
 </tr>
 
+
+	<?php
+	$cont = 1;
+	$connect = new Connection("localhost", "root", "", "usuario");
+	$connect->conectar();
+	$result_agenda = "SELECT * FROM agenda";
+	$resultNome = mysqli_query($connect->getLink(), $result_agenda);
+	while(	$row_agenda = mysqli_fetch_assoc($resultNome)){ ?>
+		<tr>
+			<td><?php echo $row_agenda['Nome'];?></td>
+			<td><?php echo $row_agenda['Data'];?></td>
+			<td><?php echo $row_agenda['Pet'];?></td>
+			<td><?php echo $row_agenda['Local'];?></td>
+		</tr>
+		<?php
+		$cont =  $cont +1;
+	}
+	?>
+
+
 <tr>
 
 </tr>
@@ -40,6 +60,9 @@
 		<input class="pure-button" type="submit" value="Cadastrar evento">
 	</form>
 <br>
+
+		<a class="pure-button" href="inter.html"> Editar </a><br><br>
+
 		<a class="pure-button" href="perfilPet.html"> Voltar </a>
 </div>
 </center>
