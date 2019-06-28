@@ -22,7 +22,7 @@
 			}
 			echo "Salvo com Sucesso";
 		}
-		//Altera um compromisso existente no BD
+		//Altera um compromisso existente no BD                                        
 		//@param 	$Compromisso : objeto do tipo compromisso
 		//		 	$link : link do BD
 		function alterar($Compromisso, $link){

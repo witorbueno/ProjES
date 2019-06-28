@@ -56,7 +56,7 @@
 </table>
 <br><br>
 <div id="botao">
-	<form action="../Persistence/cadastroEvento.php">
+	<form action="../view/cadastroEvento.php">
 		<input class="pure-button" type="submit" value="Cadastrar">
 	</form>
 <br>
@@ -71,7 +71,7 @@
 
 		<a class="pure-button" href="inter.html"> Editar </a><br><br>
 
-		<a class="pure-button" href="perfilPet.html"> Voltar </a>
+		<a class="pure-button" href="principal.html"> Voltar </a>
 </div>
 </center>
 </div>

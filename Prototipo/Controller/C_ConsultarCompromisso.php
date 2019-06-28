@@ -2,14 +2,13 @@
 	$pet = $_POST['Pet'];
 	$local = $_POST['Local'];
 
-	$Compromisso = new Compromisso("", "", "pet", "local");
+	$Compromisso = new Compromisso("", "", $pet, $local);
 	
 	$connect = new Connection("localhost", "root", "", "usuario");
 	$connect->conectar();
 	
 	$agendaDAO = new agendaDAO();
 	$row = $agendaDAO->consultar($Compromisso, $connect->getLink());
-	
 	echo "<!DOCTYPE html>
 				<html lang = \"pt-br\">
 

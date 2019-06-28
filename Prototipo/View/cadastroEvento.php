@@ -15,9 +15,9 @@
 <body>
 <div id="container">
 <center>
-<h2>alterar evento</h2>
+<h2>Cadastrando novo evento</h2>
 
-<form class = "pure-form" action= "../Controller/C_AlterarCompromisso.php" method="post">
+<form class = "pure-form" action= "../Controller/C_CadastrarCompromisso.php" method="post">
 Pet:<br>
  <select name="Pet">
   <option>Selecione</option>
@@ -27,7 +27,7 @@ Pet:<br>
 	$result_pet = "SELECT * FROM pet";
 	$resultNome = mysqli_query($connect->getLink(), $result_pet);
 	while(	$row_pet = mysqli_fetch_assoc($resultNome)){ ?>
-		<option value = "<?php echo $row_pet['Nome']; ?>" selected><?php echo $row_pet['Nome']; ?>
+		<option value = "<?php echo $row_pet['Nome']; ?>"><?php echo $row_pet['Nome']; ?>
 		</option> 
 		<?php
 	}
@@ -43,35 +43,22 @@ Pet:<br>
 	$result_local = "SELECT * FROM local";
 	$resultNome = mysqli_query($connect->getLink(), $result_local);
 	while(	$row_local = mysqli_fetch_assoc($resultNome)){ ?>
-		<option value = "<?php echo $row_local['Nome']; ?>" selected><?php echo $row_local['Nome']; ?>
+		<option value = "<?php echo $row_local['Nome']; ?>"><?php echo $row_local['Nome']; ?>
 		</option> 
 		<?php
 	}
 	?>
 </select> <br>
-
-<?php
-	
-?>
-
 <br>
-<?php
-
-	
-	$result_local = "SELECT * FROM `agenda` WHERE Pet='".$_POST['pet']."'";
-	//echo $result_local;
-	$resultNome = mysqli_query($connect->getLink(), $result_local);
-	$row_local = mysqli_fetch_assoc($resultNome);
-	?>
   Evento:<br>
-  <input type="text" name="Nome" value="<?php echo $row_local['Nome'];?>"><br>
+  <input type="text" name="Nome"><br>
   <br>
     Data:<br>
-  <input type="date" name="Data" value="<?php echo $row_local['Data'];?>"><br>
+  <input type="date" name="Data"><br>
   <br><br>
   
  <div id="botao">
-	<input class="pure-button" type="submit" value="Salvar">
+	<input class="pure-button" type="submit" value="Cadastrar">
 	<br><br>
 	<a class="pure-button" href="agenda.php"> Voltar </a>
  </div>

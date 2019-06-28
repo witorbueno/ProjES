@@ -55,7 +55,7 @@ Pet:<br>
  <div id="botao">
 	<input class="pure-button" type="submit" value="buscar">
 	<br><br>
-	<a class="pure-button" href="agenda.html"> Voltar </a>
+	<a class="pure-button" href="agenda.php"> Voltar </a>
  </div>
 </form> 
 
